@@ -3,8 +3,10 @@
 
 Team Members:
 
-Matt Kilcup
-Brenden Knight
-James Barker
-Adam Karman
+<br>
+
+Matt Kilcup <p>
+Brenden Knight <p>
+James Barker <p>
+Adam Karman <p>
 Charles Bess, Jr.
