@@ -32,20 +32,22 @@ Tasks
 HTML: James, Brenden, Charles
 Javascript: Adam, Matt
 
+<br>
+HTML
 
-Initial HTML
-
+<br>
 1. Layout
 2. Basic Build
 3. Element update to the Javascript Team
 4. Functionality merge
 5. UI upgrade (visual)
 
+<br>
+<br>
 
-
-
+Javascript
 Add movie search functionality...
-
+<br>
 
 1. Build API connections
 2. HTML element connections
