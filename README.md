@@ -36,11 +36,11 @@ Javascript: Adam, Matt
 HTML
 
 <br>
-1. Layout
-2. Basic Build
-3. Element update to the Javascript Team
-4. Functionality merge
-5. UI upgrade (visual)
+<p>1. Layout</p>
+<p>2. Basic Build</p>
+<p>3. Element update to the Javascript Team</p>
+<p>4. Functionality merge</p>
+<p>5. UI upgrade (visual)</p>
 
 <br>
 <br>
