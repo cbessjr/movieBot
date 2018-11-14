@@ -31,8 +31,6 @@ $(document).ready(function () {
         $("#movie-critic").append(movieCritic);
         $("#movie-rating").append(movieCriticRating);
         $("#movie-poster").attr("src", moviePosterUrl);
-
-
     };
 
     //function to add buttons to page
@@ -68,14 +66,20 @@ $(document).ready(function () {
             appendMovie(response);
             //addButton(response);
             var firebaseButton = {
-                movieTitle: response.Title
+                movieTitle: response.Title,
+                movieRated: response.Rated,
+                movieActors: response.Actors,
+                movieGenre: response.Genre,
+                moviePlot: response.Plot,
+                movieCritic: response.Ratings[2].Source,
+                movieCriticRating: response.Ratings[2].Value
             };
             database.ref().push(firebaseButton);
 
         }).fail(function (err) {
             throw err;
         });
-
+        $("#movie-input").val("")
     });//end first on click
 
     $(document).on("click", ".movie-button", function (event) {
