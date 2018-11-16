@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+   background: gainsboro;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  font-size: 1em;
+
+  
+  background-color: white;
+margin: 4rem auto 0;
+  padding-bottom: 2rem;
+}
+
+
+li {
+  list-style: none;
+  
+}
+
+.movie {
+    width: 4.5rem;
+    height: 3rem;
+  margin: 0 auto;
+  display: inline-block;
+} 
+
+.reels {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 900px;
+  padding: 3%;
+}
+
+.header:after {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  content:"";
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.header h1 {
+    color: rgba(89, 89, 89, 0.81);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.header h2 {
+  color: rgba(85, 85, 85, 0.92); 
+  font-size: 1em;
+  display: inline-block;
+  font-weight: normal;
+      vertical-align: top;
+}
+
+
+
+.form-section {
+  
+ margin: 3rem auto;
+  text-align: center;
+  width: 100%;
+  font-family: 'Droid Serif', serif;
+  color: rgba(68, 64, 64, 0.75); 
+}
+
+.form-section label {
+   border-bottom: 1px dotted rgba(0, 0, 0, 0.56);
+  padding-bottom: .25rem;
+  margin-right: 1em;
+} 
+
+
+.listed-movie {
+   margin: .5rem 1rem .75rem;
+  display: block;
+/*    width: 28%;*/
+  
+}
+
+.theater-listing {
+ display: inline-block;
+  width: 45%;
+  
+}
+.movie-title {
+
+  font-family: 'Droid Serif', serif;
+  /* font-weight: bold; */
+  background-color: wheat;
+
+  font-size: 1.4rem;
+  padding: 1%;
+}
+
+.movie-theater {
+ font-family: 'Droid Serif', serif;
+  font-size: 1.15rem;
+}
+
+.movie-time {
+ 
+    display: inline-block;
+  font-family: 'Droid Sans', sans-serif;
+  color: rgba(64, 84, 77, 0.79);
+  font-size: 0.95rem;
+  margin-right: .75em;
+}
+
+
+.how-many {
+ text-align: center;
+  font-family: 'Droid Serif', serif;
+  color: grey;
+  font-size: 1.3rem; 
+}
+
+/*
+input[type="search"]:focus {
+border-bottom: 3px green; 
+}
+*/
+
+
+
+/*****MEDIA QUERIES *****/
+@media only screen and (max-width: 600px) {
+ body {
+   background: #fff; 
+  }
+  
+  .container {
+     margin: .75rem auto 0;
+ background: transparent;
+   border-radius: 0;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .form-section label {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.56);
+  padding-bottom: .25rem;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  }
+  
+  .form-section #search {
+    display: inline-block;
+  margin: 1rem auto 0;
+  }
+  
+  .form-section #submit {
+    display: inline-block;
+  }
+  
+
+  
+  .listings {
+  position: relative;
+  left: -20px;
+  }
+  
+  
+  .listed-movie {
+   margin: 1rem 1rem .5rem 0;
+    width: 100%;
+}
+  
+  
+ .how-many {
+     font-size: 1rem;
+  margin-bottom: 2rem; 
+  }
+  
+  .theater-listing {
+  display: inline-block;
+      width: 100%;
+      margin: 0 .25rem .25rem 0; 
+  }
+  
+  
+}
+p {
+  text-align: center;
+}
+
+
+
