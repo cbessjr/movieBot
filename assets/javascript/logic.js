@@ -74,7 +74,7 @@ $(document).ready(function () {
                 movieCritic: response.Ratings[2].Source,
                 movieCriticRating: response.Ratings[2].Value
             };
-            database.ref().push(firebaseButton);
+            database.ref(`/${response.Title}`).set(firebaseButton);
 
         }).fail(function (err) {
             throw err;
