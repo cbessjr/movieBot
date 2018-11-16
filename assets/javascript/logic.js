@@ -59,6 +59,7 @@ $(document).ready(function () {
 
             movies.push(searchInput)
 
+
             console.log(movies)
 
             checkArray(movies, searchInput);
