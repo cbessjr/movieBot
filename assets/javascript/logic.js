@@ -11,6 +11,10 @@ $(document).ready(function () {
     firebase.initializeApp(config);
     var database = firebase.database();
 
+    function checkArray(array, searchInput) {
+        var hasMovie = array.includes(searchInput);
+        return hasMovie;
+    }
     //function to append movies to page
     function appendMovie(response) {
         $(".display").empty();
@@ -44,41 +48,56 @@ $(document).ready(function () {
         buttonContainer.append(newButton)
     };
 
+    var movies = []
+
     $("#add-movie").on("click", function (event) {
 
         event.preventDefault();
 
         var searchInput = $("#movie-input").val().trim();
+        if (searchInput != "") {
 
-        var url = "http://www.omdbapi.com/";
-        url += '?' + $.param({
-            //"i": "tt3896198",
-            "t": searchInput, //user input search by movie name
-            "plot": "short", //returns shortened plot
-            "apikey": "adaf8b76" //api-key
-        });
+            movies.push(searchInput)
 
-        $.ajax({
-            url: url,
-            method: 'GET',
-        }).done(function (response) {
-            console.log(response);
-            appendMovie(response);
-            //addButton(response);
-            var firebaseButton = {
-                movieTitle: response.Title,
-                movieRated: response.Rated,
-                movieActors: response.Actors,
-                movieGenre: response.Genre,
-                moviePlot: response.Plot,
-                movieCritic: response.Ratings[2].Source,
-                movieCriticRating: response.Ratings[2].Value
-            };
-            database.ref().push(firebaseButton);
+            console.log(movies)
 
-        }).fail(function (err) {
-            throw err;
-        });
+            checkArray(movies, searchInput);
+
+            //if (hasMovie = false) {
+
+            var url = "http://www.omdbapi.com/";
+            url += '?' + $.param({
+                //"i": "tt3896198",
+                "t": searchInput, //user input search by movie name
+                "plot": "short", //returns shortened plot
+                "apikey": "adaf8b76" //api-key
+            });
+
+            $.ajax({
+                url: url,
+                method: 'GET',
+            }).done(function (response) {
+                console.log(response);
+                appendMovie(response);
+                //addButton(response);
+                var firebaseButton = {
+                    movieTitle: response.Title,
+                    movieRated: response.Rated,
+                    movieActors: response.Actors,
+                    movieGenre: response.Genre,
+                    moviePlot: response.Plot,
+                    movieCritic: response.Ratings[2].Source,
+                    movieCriticRating: response.Ratings[2].Value
+                };
+                database.ref(`/${response.Title}`).set(firebaseButton);
+
+            }).fail(function (err) {
+                throw err;
+            });
+            //};
+        };//end if statement
+        //};
+
         $("#movie-input").val("")
     });//end first on click
 
