@@ -11,10 +11,10 @@ $(document).ready(function () {
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    function checkArray(array, searchInput) {
+    /* function checkArray(array, searchInput) {
         var hasMovie = array.includes(searchInput);
         return hasMovie;
-    }
+    } */
     //function to append movies to page
     function appendMovie(response) {
         $(".display").empty();
@@ -54,19 +54,20 @@ $(document).ready(function () {
 
         event.preventDefault();
 
+
         var searchInput = $("#movie-input").val().trim();
+
         if (searchInput != "") {
 
             movies.push(searchInput)
 
-
             console.log(movies)
 
-            checkArray(movies, searchInput);
+            //checkArray(movies, searchInput);
 
             //if (hasMovie = false) {
 
-            var url = "http://www.omdbapi.com/";
+            var url = "https://www.omdbapi.com/";
             url += '?' + $.param({
                 //"i": "tt3896198",
                 "t": searchInput, //user input search by movie name
@@ -105,13 +106,11 @@ $(document).ready(function () {
     $(document).on("click", ".movie-button", function (event) {
 
         var searchInput = $(this).attr("data-value");
-        //var typeInput = $("#example-input-field").val().trim();
 
-        var url = "http://www.omdbapi.com/";
+        var url = "https://www.omdbapi.com/";
         url += '?' + $.param({
             //"i": "tt3896198",
             "t": searchInput, //user input search by movie name
-            //"type": typeInput, //search by movie, tv show
             "plot": "short", //returns shortened plot
             "apikey": "adaf8b76" //api-key
         });
@@ -122,7 +121,6 @@ $(document).ready(function () {
         }).done(function (response) {
             console.log(response);
             appendMovie(response);
-            // addButton(response);
 
         }).fail(function (err) {
             throw err;
@@ -131,6 +129,8 @@ $(document).ready(function () {
 
     database.ref().on("child_added", function (childSnapshot) {
         console.log(childSnapshot);
+
+        //adds button everytime a new movie is added
         addButton(childSnapshot);
     });//end first on child_added
 });//end code
