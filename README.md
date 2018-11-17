@@ -56,3 +56,20 @@ Add movie search functionality...
 1. Build API connections
 2. HTML element connections
 3. Database setup  
+
+
+<br>
+<br>
+<p>Target User</p>
+<p>The target user for the application will be movie goers wanting to search for movies and schedule movie times</p>
+<p>at a glance. The application will provide movie information, movie trailers, theatre times for "active" movies, </p>
+<p>and map directions to theatres. The </p>
+<br>
+
+<p>What is the problem your product addresses?</p>
+<p>Providing users with a fast solution to searching for movies, remembering what movies they have inquired about, </p>
+<p>planning a theatre visit for "active" movies. In addition the application will link to movie trailers to allow users </p>
+<p>to make a more informed decision on their movie views. </p>
+
+
+<p>What technical challenges are you working on overcoming, right now? How?</p>
