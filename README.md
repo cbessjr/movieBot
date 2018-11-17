@@ -63,7 +63,7 @@ Add movie search functionality...
 <p>Target User</p>
 <p>The target user for the application will be movie goers wanting to search for movies and schedule movie times</p>
 <p>at a glance. The application will provide movie information, movie trailers, theatre times for "active" movies, </p>
-<p>and map directions to theatres. The </p>
+<p>and map directions to theatres.</p>
 <br>
 
 <p>What is the problem your product addresses?</p>
