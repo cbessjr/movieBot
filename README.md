@@ -71,5 +71,6 @@ Add movie search functionality...
 <p>planning a theatre visit for "active" movies. In addition the application will link to movie trailers to allow users </p>
 <p>to make a more informed decision on their movie views. </p>
 
-
+<br>
 <p>What technical challenges are you working on overcoming, right now? How?</p>
+<p>Currently, the technical challenges the team faces are the implementation of the APIs being used to provide functionality to the application.</p>
