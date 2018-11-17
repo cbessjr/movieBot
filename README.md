@@ -73,4 +73,4 @@ Add movie search functionality...
 
 <br>
 <p>What technical challenges are you working on overcoming, right now? How?</p>
-<p>Currently, the technical challenges the team faces are the implementation of the APIs being used to provide functionality to the application.</p>
+<p>Currently, the technical challenges the team faces are the implementation of the APIs being used to provide functionality to the application. CSS styling to accomodate the javascript implementation.</p>
