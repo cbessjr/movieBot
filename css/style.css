@@ -2,24 +2,21 @@
   box-sizing: border-box;
 }
 
-
 body {
-  background: gainsboro;
+  background: url(../images/1lAdGBz.jpg);
   margin: 0;
 }
 
 .container {
   max-width: 900px;
   font-size: 1em;
-  background-color: white;
+  opacity: 0.10%;
   margin: 4rem auto 0;
   padding-bottom: 2rem;
 }
 
-
 li {
   list-style: none;
-  
 }
 
 .movie {
@@ -82,9 +79,9 @@ li {
 } 
 
 .listed-movie {
-   margin: .5rem 1rem .75rem;
+  margin: .5rem 1rem .75rem;
   display: block;
-/*    width: 28%;*/
+  width: 28%;*/
   
 }
 
@@ -95,7 +92,7 @@ li {
 }
 .movie-title {
   font-family: 'lobster';
-  /* font-weight: bold; */
+  font-weight: bold; */
   background-color: wheat;
   font-size: 1.4rem;
   padding: 1%;
@@ -120,13 +117,10 @@ li {
   color: grey;
   font-size: 1.3rem; 
 }
-/*
 input[type="search"]:focus {
 border-bottom: 3px green; 
 }
-*/
 
-/*****MEDIA QUERIES *****/
 @media only screen and (max-width: 600px) {
  body {
    background: #fff; 
@@ -140,24 +134,22 @@ border-bottom: 3px green;
   }
 
   .form-section label {
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.56);
-  padding-bottom: .25rem;
-  display: block;
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.56);
+    padding-bottom: .25rem;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
   }
   
   .form-section #search {
     display: inline-block;
-  margin: 1rem auto 0;
+    margin: 1rem auto 0;
   }
   
   .form-section #submit {
     display: inline-block;
   }
-  
-
   
   .listings {
     position: relative;

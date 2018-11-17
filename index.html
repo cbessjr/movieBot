@@ -7,9 +7,11 @@
 	<title>Movie Theaters and Showtimes</title>
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Ranga" rel="stylesheet">
 	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-
 	<link rel="stylesheet" href="css/style.css">
-
+	<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+</head>
 
 <body>
 	<div class="container">
@@ -24,21 +26,33 @@
 		<div class="form-section">
 			<form>
 				<?xml version="1.0" encoding="utf-8"?>
-
-				<label for="search">Enter the Name of a Movie</label>
-				<input type="search" name="search" id="search">
-				<input type="submit" value="Search" id="submit">
+				<label for="movie-input">Enter the Name of a Movie</label>
+				<input type="text" name="search" id="movie-input">
+				<input type="submit" value="Search" id="add-movie">
 			</form>
 		</div>
-		<div id="showtimes">
+		<div id="button-container"></div>		
+	<div id="movie-display">
+		<div class="display" id="movie-title"></div>
+		<div class="display" id="movie-rated"></div>
+		<div class="display" id="movie-actors"></div>
+		<div class="display" id="movie-genre"></div>
+		<div class="display" id="movie-plot"></div>
+		<div class="display" id="movie-critic"></div>
+		<div class="display" id="movie-rating"></div>
+		<img class="display" id="movie-poster">
+		<div class="display" id="movie-trailer"></div>
+	</div>
 
-		</div>
+	<script src="assets/javascript/logic.js"></script>
+
+	<div id="showtimes">
+
+	</div>
 
 	</div>
 	<p> Developed By Charles Bess, Brenden Knight, James Barker, Matt Kilcup, Adam karman</p>
 
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="assets/javascript/logic.js"></script>
 </body>
 
 </html>
