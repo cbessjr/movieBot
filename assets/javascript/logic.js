@@ -26,7 +26,9 @@ $(document).ready(function () {
         var movieCritic = $("<p>").text(response.Ratings[2].Source);
         var movieCriticRating = $("<p>").text(response.Ratings[2].Value);
         var moviePosterUrl = response.Poster;
-        // console.log(movieTitle, movieRated, movieActors, movieCritic, movieCriticRating, moviePlot, moviePosterUrl, movieGenre);
+        var movieTrailer = $("<button>").text("Watch " + response.Title + " Trailer")
+            .attr("data-value", response.Title)
+            .attr("id", "trailer");
         $("#movie-title").append(movieTitle);
         $("#movie-rated").append(movieRated);
         $("#movie-actors").append(movieActors);
@@ -35,6 +37,7 @@ $(document).ready(function () {
         $("#movie-critic").append(movieCritic);
         $("#movie-rating").append(movieCriticRating);
         $("#movie-poster").attr("src", moviePosterUrl);
+        $("#movie-trailer").append(movieTrailer);
     };
 
     //function to add buttons to page
@@ -133,4 +136,17 @@ $(document).ready(function () {
         //adds button everytime a new movie is added
         addButton(childSnapshot);
     });//end first on child_added
+
+    $(document).on("click", "#trailer", function (event) {
+        var movieTrailerDiv = $("#movie-trailer")
+        movieTrailerDiv.empty();
+
+        var baseUrl = 'https://www.youtube.com/embed?listType=search&list=';
+        var searchField = $(this).attr("data-value") + " trailer";
+        var targetUrl = baseUrl + searchField;
+        var ifr = $("<iframe>").attr("src", targetUrl);
+
+        movieTrailerDiv.append(ifr);
+    })//end third on click
+    
 });//end code
