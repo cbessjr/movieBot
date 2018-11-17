@@ -16,7 +16,10 @@ Charles Bess, Jr.
 
 <br>
 <p>Movie search utility that will provide users with movie names, descriptions (To include actors, actress, etc.), theatre locations, showtimes, google map directions.</p>
+<br>
 
+<p>https://github.com/cbessjr/project-1</p>
+<p>https://cbessjr.github.io/project-1/</p>
 <br>
 <p>APIs<p>
 
@@ -26,6 +29,7 @@ Charles Bess, Jr.
 <p>https://www.programmableweb.com/api/rotten-tomatoes</p>
 <p>https://developers.themoviedb.org/3/search/search-movies</p>
 <p>https://market.mashape.com/razor/themovieclips/pricing</p>
+
 
 <br>
 Tasks
