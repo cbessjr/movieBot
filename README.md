@@ -16,7 +16,10 @@ Charles Bess, Jr.
 
 <br>
 <p>Movie search utility that will provide users with movie names, descriptions (To include actors, actress, etc.), theatre locations, showtimes, google map directions.</p>
+<br>
 
+<p>https://github.com/cbessjr/project-1</p>
+<p>https://cbessjr.github.io/project-1/</p>
 <br>
 <p>APIs<p>
 
@@ -26,6 +29,7 @@ Charles Bess, Jr.
 <p>https://www.programmableweb.com/api/rotten-tomatoes</p>
 <p>https://developers.themoviedb.org/3/search/search-movies</p>
 <p>https://market.mashape.com/razor/themovieclips/pricing</p>
+
 
 <br>
 Tasks
@@ -52,3 +56,21 @@ Add movie search functionality...
 1. Build API connections
 2. HTML element connections
 3. Database setup  
+
+
+<br>
+<br>
+<p>Target User</p>
+<p>The target user for the application will be movie goers wanting to search for movies and schedule movie times</p>
+<p>at a glance. The application will provide movie information, movie trailers, theatre times for "active" movies, </p>
+<p>and map directions to theatres.</p>
+<br>
+
+<p>What is the problem your product addresses?</p>
+<p>Providing users with a fast solution to searching for movies, remembering what movies they have inquired about, </p>
+<p>planning a theatre visit for "active" movies. In addition the application will link to movie trailers to allow users </p>
+<p>to make a more informed decision on their movie views. </p>
+
+<br>
+<p>What technical challenges are you working on overcoming, right now? How?</p>
+<p>Currently, the technical challenges the team faces are the implementation of the APIs being used to provide functionality to the application. CSS styling to accomodate the javascript implementation.</p>
