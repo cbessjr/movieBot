@@ -4,15 +4,17 @@
 
 
 body {
-  background-image: url(../images/1lAdGBz.jpg);
+   background: gainsboro;
   margin: 0;
 }
 
 .container {
   max-width: 900px;
   font-size: 1em;
-  opacity: 0.10%;
-  margin: 4rem auto 0;
+
+  
+  background-color: white;
+margin: 4rem auto 0;
   padding-bottom: 2rem;
 }
 
@@ -23,8 +25,8 @@ li {
 }
 
 .movie {
-  width: 4.5rem;
-  height: 3rem;
+    width: 4.5rem;
+    height: 3rem;
   margin: 0 auto;
   display: inline-block;
 } 
@@ -37,7 +39,7 @@ li {
 .header {
   width: 100%;
   text-align: center;
-  font-family: 'Lobster';
+  font-family: 'Open Sans', sans-serif;
   max-width: 900px;
   padding: 3%;
 }
@@ -52,27 +54,38 @@ li {
 }
 
 .header h1 {
-  color: red;
+    color: rgba(89, 89, 89, 0.81);
   text-transform: uppercase;
   letter-spacing: 0.03em;
   font-size: 3rem;
   font-weight: 300;
 }
 
-.form-section { 
-  margin: 3rem auto;
+.header h2 {
+  color: rgba(85, 85, 85, 0.92); 
+  font-size: 1em;
+  display: inline-block;
+  font-weight: normal;
+      vertical-align: top;
+}
+
+
+
+.form-section {
+  
+ margin: 3rem auto;
   text-align: center;
   width: 100%;
-  font-family: 'lobster';
-  font-size: 20pt;
-  color: red; 
+  font-family: 'Droid Serif', serif;
+  color: rgba(68, 64, 64, 0.75); 
 }
 
 .form-section label {
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.56);
+   border-bottom: 1px dotted rgba(0, 0, 0, 0.56);
   padding-bottom: .25rem;
   margin-right: 1em;
 } 
+
 
 .listed-movie {
    margin: .5rem 1rem .75rem;
@@ -87,37 +100,44 @@ li {
   
 }
 .movie-title {
-  font-family: 'lobster';
+
+  font-family: 'Droid Serif', serif;
   /* font-weight: bold; */
   background-color: wheat;
+
   font-size: 1.4rem;
   padding: 1%;
 }
 
 .movie-theater {
-  font-family: 'lobster';
+ font-family: 'Droid Serif', serif;
   font-size: 1.15rem;
 }
 
 .movie-time {
-  display: inline-block;
-  font-family: 'lobster';
+ 
+    display: inline-block;
+  font-family: 'Droid Sans', sans-serif;
   color: rgba(64, 84, 77, 0.79);
   font-size: 0.95rem;
   margin-right: .75em;
 }
 
+
 .how-many {
-  text-align: center;
-  font-family: 'lobster';
+ text-align: center;
+  font-family: 'Droid Serif', serif;
   color: grey;
   font-size: 1.3rem; 
 }
+
 /*
 input[type="search"]:focus {
 border-bottom: 3px green; 
 }
 */
+
+
 
 /*****MEDIA QUERIES *****/
 @media only screen and (max-width: 600px) {
@@ -126,24 +146,25 @@ border-bottom: 3px green;
   }
   
   .container {
-    margin: .75rem auto 0;
-    background: transparent;
-    border-radius: 0;
+     margin: .75rem auto 0;
+ background: transparent;
+   border-radius: 0;
     padding-bottom: 2rem;
   }
-
+  
+  
   .form-section label {
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.56);
-    padding-bottom: .25rem;
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.56);
+  padding-bottom: .25rem;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
   }
   
   .form-section #search {
     display: inline-block;
-    margin: 1rem auto 0;
+  margin: 1rem auto 0;
   }
   
   .form-section #submit {
@@ -153,27 +174,30 @@ border-bottom: 3px green;
 
   
   .listings {
-    position: relative;
-    left: -20px;
+  position: relative;
+  left: -20px;
   }
   
+  
   .listed-movie {
-    margin: 1rem 1rem .5rem 0;
+   margin: 1rem 1rem .5rem 0;
     width: 100%;
 }
   
+  
  .how-many {
-  font-size: 1rem;
+     font-size: 1rem;
   margin-bottom: 2rem; 
   }
   
   .theater-listing {
-    display: inline-block;
-    width: 100%;
-    margin: 0 .25rem .25rem 0; 
+  display: inline-block;
+      width: 100%;
+      margin: 0 .25rem .25rem 0; 
   }
+  
+  
 }
-
 p {
   text-align: center;
 }
@@ -182,10 +206,10 @@ p {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 35%;
-  top: 35%;
-  width: 35%; /* Full width */
-  height: 50%; /* Full height */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
