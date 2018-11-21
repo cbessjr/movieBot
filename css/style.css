@@ -81,7 +81,7 @@ li {
 .listed-movie {
   margin: .5rem 1rem .75rem;
   display: block;
-  width: 28%;*/
+  width: 28%;
   
 }
 
@@ -92,7 +92,7 @@ li {
 }
 .movie-title {
   font-family: 'lobster';
-  font-weight: bold; */
+  font-weight: bold;
   background-color: wheat;
   font-size: 1.4rem;
   padding: 1%;
@@ -176,6 +176,3 @@ border-bottom: 3px green;
 p {
   text-align: center;
 }
-
-
-

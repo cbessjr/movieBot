@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     // Initialize Firebase
     var config = {
@@ -139,15 +138,23 @@ $(document).ready(function () {
     });//end first on child_added
 
     $(document).on("click", "#trailer", function (event) {
-        var movieTrailerDiv = $("#movie-trailer")
-        movieTrailerDiv.empty();
-
+        var modalDiv = $("#modal-content")
+        modal.style.display = "block";
         var baseUrl = 'https://www.youtube.com/embed?listType=search&list=';
         var searchField = $(this).attr("data-value") + " trailer";
         var targetUrl = baseUrl + searchField;
-        var ifr = $("<iframe>").attr("src", targetUrl);
+        var ifr = $("#iframe").attr("src", targetUrl);
 
-        movieTrailerDiv.append(ifr);
+        modalDiv.append(ifr);
     })//end third on click
-    
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    };//end modal span on click
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }//end window modal on click
 });//end code
