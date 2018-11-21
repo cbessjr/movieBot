@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("trailer");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyC2lAryNx_K6KKAzVKVihZ5JEie983QHt0",
@@ -11,10 +20,6 @@ $(document).ready(function () {
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    /* function checkArray(array, searchInput) {
-        var hasMovie = array.includes(searchInput);
-        return hasMovie;
-    } */
     //function to append movies to page
     function appendMovie(response) {
         $(".display").empty();
@@ -65,11 +70,7 @@ $(document).ready(function () {
             movies.push(searchInput)
 
             console.log(movies)
-
-            //checkArray(movies, searchInput);
-
-            //if (hasMovie = false) {
-
+            
             var url = "https://www.omdbapi.com/";
             url += '?' + $.param({
                 //"i": "tt3896198",
@@ -83,27 +84,30 @@ $(document).ready(function () {
                 method: 'GET',
             }).done(function (response) {
                 console.log(response);
-                appendMovie(response);
-                //addButton(response);
-                var firebaseButton = {
-                    movieTitle: response.Title,
-                    movieRated: response.Rated,
-                    movieActors: response.Actors,
-                    movieGenre: response.Genre,
-                    moviePlot: response.Plot,
-                    movieCritic: response.Ratings[2].Source,
-                    movieCriticRating: response.Ratings[2].Value
-                };
-                database.ref(`/${response.Title}`).set(firebaseButton);
+
+                //Error handling if movie not found
+                if (response.Response != "False") {
+                    appendMovie(response);
+                    //addButton(response);
+                    var firebaseButton = {
+                        movieTitle: response.Title,
+                        movieRated: response.Rated,
+                        movieActors: response.Actors,
+                        movieGenre: response.Genre,
+                        moviePlot: response.Plot,
+                        movieCritic: response.Ratings[2].Source,
+                        movieCriticRating: response.Ratings[2].Value
+                    };
+                    database.ref(`/${response.Title}`).set(firebaseButton);
+                }//end error handling if stmnt
 
             }).fail(function (err) {
                 throw err;
             });
-            //};
         };//end if statement
-        //};
 
         $("#movie-input").val("")
+        
     });//end first on click
 
     $(document).on("click", ".movie-button", function (event) {
@@ -157,4 +161,5 @@ $(document).ready(function () {
             modal.style.display = "none";
         }
     }//end window modal on click
+
 });//end code
