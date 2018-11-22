@@ -56,8 +56,23 @@ $(document).ready(function () {
             .attr("data-value", databaseTitle)
             .attr("href", href)
             .attr("class", "movie-button");
+            
+        if (databaseRated === "G") {
 
-        buttonContainer.append(newButton)
+            $('#g').append(newButton)
+
+        } else if (databaseRated === "PG") {
+
+            $('#pg').append(newButton)
+
+        } else if (databaseRated === "PG-13") {
+
+            $('#pg13').append(newButton)
+
+        } else {
+
+            $('#r').append(newButton)
+        }
     };
 
     var movies = []
@@ -74,7 +89,7 @@ $(document).ready(function () {
             movies.push(searchInput)
 
             console.log(movies)
-            
+
             var url = "https://www.omdbapi.com/";
             url += '?' + $.param({
                 //"i": "tt3896198",
@@ -111,7 +126,7 @@ $(document).ready(function () {
         };//end if statement
 
         $("#movie-input").val("")
-        
+
     });//end first on click
 
     $(document).on("click", ".movie-button", function (event) {
@@ -140,7 +155,7 @@ $(document).ready(function () {
 
     database.ref().on("child_added", function (childSnapshot) {
         console.log(childSnapshot);
-        
+
         //adds button everytime a new movie is added
         addButton(childSnapshot);
     });//end first on child_added
