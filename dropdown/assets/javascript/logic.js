@@ -56,7 +56,7 @@ $(document).ready(function () {
             .attr("data-value", databaseTitle)
             .attr("href", href)
             .attr("class", "movie-button");
-            
+
         if (databaseRated === "G") {
 
             $('#g').append(newButton)
@@ -75,7 +75,23 @@ $(document).ready(function () {
         }
     };
 
-    var movies = []
+    $(function () {
+        $("#movie-input").autocomplete({
+            source: movies
+        })
+    })
+
+    var movies = [
+        "The Godfather",
+        "The Shawshank Redemption",
+        "Schindler's List",
+        "Raging Bull",
+        "Casablanca",
+        "Citizen Kane",
+        "Gone with the Wind",
+        "The Wizard of Oz",
+        "One Flew Over the Cuckoo's Nest"
+    ]
 
     $("#add-movie").on("click", function (event) {
 
