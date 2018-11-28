@@ -1,3 +1,8 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 #trailer {
   margin-left: auto;
   margin-right: auto;
@@ -8,6 +13,15 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+footer {
+  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: darkgray;
 }
 
 * {
@@ -25,7 +39,7 @@ body {
   font-size: 1em;
   opacity: 1;
   margin: 4rem auto 0;
-  padding-bottom: 2rem;
+  padding-bottom: 75px;
 }
 
 
@@ -89,7 +103,6 @@ li {
 .listed-movie {
    margin: .5rem 1rem .75rem;
   display: block;
-/*    width: 28%;*/
   
 }
 
@@ -100,7 +113,6 @@ li {
 }
 .movie-title {
   font-family: 'lobster';
-  /* font-weight: bold; */
   background-color: wheat;
   font-size: 1.4rem;
   padding: 1%;
@@ -125,23 +137,15 @@ li {
   color: grey;
   font-size: 1.3rem; 
 }
-/*
-input[type="search"]:focus {
-border-bottom: 3px green; 
-}
-*/
 
 /*****MEDIA QUERIES *****/
 @media only screen and (max-width: 600px) {
- body {
-   background: #fff; 
-  }
-  
+   
   .container {
     margin: .75rem auto 0;
     background: transparent;
     border-radius: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 75px;
   }
 
   .form-section label {
