@@ -23,6 +23,7 @@ $(document).ready(function () {
     //function to append movies to page
     function appendMovie(response) {
         $(".display").empty();
+        $("#movie-display").css("background-color", "rgba(204, 204, 204, .9)");
         var movieTitle = $("<p>").text(response.Title);
         var movieRated = $("<p>").text(response.Rated);
         var movieActors = $("<p>").text(response.Actors);
@@ -123,7 +124,6 @@ $(document).ready(function () {
                 //Error handling if movie not found
                 if (response.Response != "False") {
                     appendMovie(response);
-                    //addButton(response);
                     var firebaseButton = {
                         movieTitle: response.Title,
                         movieRated: response.Rated,
