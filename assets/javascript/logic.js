@@ -47,16 +47,51 @@ $(document).ready(function () {
 
     //function to add buttons to page
     function addButton(childSnapshot) {
+        var href = $(this).attr("data-value")
+        var databaseRated = childSnapshot.val().movieRated;
         var databaseTitle = childSnapshot.val().movieTitle;
-        var buttonContainer = $("#button-container")
-        var newButton = $("<button/>").text(databaseTitle)
+        var buttonContainer = $(".dropdown-item")
+        var newButton = $("<li/>").text(databaseTitle)
+            .attr("data-rated", databaseRated)
             .attr("data-value", databaseTitle)
+            .attr("href", href)
             .attr("class", "movie-button");
 
-        buttonContainer.append(newButton)
+        if (databaseRated === "G") {
+
+            $('#g').append(newButton)
+
+        } else if (databaseRated === "PG") {
+
+            $('#pg').append(newButton)
+
+        } else if (databaseRated === "PG-13") {
+
+            $('#pg13').append(newButton)
+
+        } else {
+
+            $('#r').append(newButton)
+        }
     };
 
-    var movies = []
+    $(function () {
+        $("#movie-input").autocomplete({
+            source: movies
+        })
+    })
+
+    var movies = [
+        "The Godfather",
+        "The Shawshank Redemption",
+        "Schindler's List",
+        "Raging Bull",
+        "Casablanca",
+        "Citizen Kane",
+        "Gone with the Wind",
+        "The Wizard of Oz",
+        "One Flew Over the Cuckoo's Nest"
+    ]
 
     $("#add-movie").on("click", function (event) {
 
@@ -70,7 +105,7 @@ $(document).ready(function () {
             movies.push(searchInput)
 
             console.log(movies)
-            
+
             var url = "https://www.omdbapi.com/";
             url += '?' + $.param({
                 //"i": "tt3896198",
@@ -107,7 +142,7 @@ $(document).ready(function () {
         };//end if statement
 
         $("#movie-input").val("")
-        
+
     });//end first on click
 
     $(document).on("click", ".movie-button", function (event) {
