@@ -20,6 +20,12 @@ $(document).ready(function () {
     firebase.initializeApp(config);
     var database = firebase.database();
 
+    function addReview(result) {
+        //$("#movie-review").empty();
+        var movieReview = $("<p>").text(result.results[0].summary_short)
+        $("#movie-review").append(movieReview);
+    }
+
     //function to append movies to page
     function appendMovie(response) {
         $(".display").empty();
@@ -139,6 +145,25 @@ $(document).ready(function () {
             }).fail(function (err) {
                 throw err;
             });
+
+            //Ajax call to nytimes api
+            var url2 = "https://api.nytimes.com/svc/movies/v2/reviews/search.json";
+            url2 += '?' + $.param({
+                'api-key': "cfa1a521d29c404aa4db785ff47a4a4c",
+                'query': "'" + searchInput + "'"
+            });
+
+            $.ajax({
+                url: url2,
+                method: 'GET',
+            }).done(function (result) {
+                console.log(result);
+                if (result.num_results > 0) {
+                    addReview(result);
+                }
+            }).fail(function (err) {
+                throw err;
+            });
         };//end if statement
 
         $("#movie-input").val("")
@@ -164,6 +189,25 @@ $(document).ready(function () {
             console.log(response);
             appendMovie(response);
 
+        }).fail(function (err) {
+            throw err;
+        });
+
+        var url2 = "https://api.nytimes.com/svc/movies/v2/reviews/search.json";
+        url2 += '?' + $.param({
+            'api-key': "cfa1a521d29c404aa4db785ff47a4a4c",
+            'query': "'" + searchInput + "'"
+        });
+
+        $.ajax({
+            url: url2,
+            method: 'GET',
+        }).done(function (result) {
+            console.log(result);
+            //var resultArray = result.results
+            if (result.num_results > 0) {
+                addReview(result);
+            }
         }).fail(function (err) {
             throw err;
         });
