@@ -67,15 +67,6 @@ li {
   padding: 3%;
 }
 
-/* .header:after {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  content:"";
-  width: 50%;
-  display: block;
-  margin: 0 auto; */
-  
-/* } */
-
 .header h1 {
   color: white;
   letter-spacing: 0.03em;
@@ -88,8 +79,6 @@ li {
   text-align: center;
   width: 100%;
   font-family: 'lobster';
-  /* font-size: 20pt;
-  color: red;  */
 }
 
 .form-section label {
@@ -101,14 +90,13 @@ li {
 .listed-movie {
    margin: .5rem 1rem .75rem;
   display: block;
-  
 }
 
 .theater-listing {
  display: inline-block;
   width: 45%;
-  
 }
+
 .movie-title {
   font-family: 'lobster';
   background-color: wheat;
@@ -163,9 +151,7 @@ li {
   .form-section #submit {
     display: inline-block;
   }
-  
-
-  
+    
   .listings {
     position: relative;
     left: -20px;
