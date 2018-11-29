@@ -38,10 +38,9 @@ body {
   max-width: 900px;
   font-size: 1em;
   opacity: 1;
-  margin: 4rem auto 0;
+  margin: .5rem auto 0;
   padding-bottom: 75px;
 }
-
 
 li {
   list-style: none;
@@ -64,21 +63,21 @@ li {
   width: 100%;
   text-align: center;
   font-family: 'Lobster';
-  max-width: 900px;
+  max-width: 1500px;
   padding: 3%;
 }
 
-.header:after {
+/* .header:after {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   content:"";
   width: 50%;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; */
   
-}
+/* } */
 
 .header h1 {
-  color: red;
+  color: white;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   font-size: 3rem;
@@ -90,8 +89,8 @@ li {
   text-align: center;
   width: 100%;
   font-family: 'lobster';
-  font-size: 20pt;
-  color: red; 
+  /* font-size: 20pt;
+  color: red;  */
 }
 
 .form-section label {
@@ -199,10 +198,9 @@ p {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 35%;
-  top: 35%;
-  width: 35%; /* Full width */
   height: 50%; /* Full height */
+  margin: auto;
+  width: 35%; /* Full width */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -212,12 +210,20 @@ p {
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
+  left: 0%;
+  top: 0%;
+  height: 45%;
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
+iframe {
+  height: 300px;
+  width: 400px;
+}
+
+  /* The Close Button */
 .close {
   color: #aaa;
   float: right;
