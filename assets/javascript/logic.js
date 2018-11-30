@@ -38,7 +38,7 @@ $(document).ready(function () {
         var movieCritic = $("<p>").text(response.Ratings[2].Source);
         var movieCriticRating = $("<p>").text(response.Ratings[2].Value);
         var moviePosterUrl = response.Poster;
-        var movieTrailer = $("<button>").text("Watch " + response.Title + " Trailer")
+        var movieTrailer = $("<button>").text("Watch " + response.Title + " Trailer").attr("class", "btn btn-primary btn-lg btn-block")
             .attr("data-value", response.Title)
             .attr("id", "trailer");
         $("#movie-title").append(movieTitle);
